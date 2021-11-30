@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react'
 import "bootstrap/dist/css/bootstrap.min.css" 
 import "bootstrap/dist/js/bootstrap" 
 import Filter from "./Components/Filters/Filters"
-import Cards from "./Components/Cards/Cards"
+import Cards from "./Components/Cards"
 
 function App() {
 
