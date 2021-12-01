@@ -34,7 +34,7 @@ useEffect(()=> {
       <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUsZ4kIPn362NpJfOnswm9zIjr1aeAfNWoMT4qJUusnz8R3nZN4KwwlB5InGUlHhmCU9s&usqp=CAU"/>
 
       </h1>
-      <Search setSearch={setSearch} className=""/>
+      <Search setPageNumber={setPageNumber} setSearch={setSearch} className=""/>
       <div className="container">
         <div className = "row">
 
