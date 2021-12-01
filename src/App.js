@@ -5,17 +5,18 @@ import "bootstrap/dist/js/bootstrap"
 import Filter from "./Components/Filters/Filters"
 import Cards from "./Components/Cards"
 import Pagination from './Components/Pagination/Pagination'
-
+import Search from "./Components/Search/Search"
 function App() {
 
   let [pageNumber, setPageNumber] = useState(1);
   console.log(pageNumber)
+  let [search, setSearch] = useState("")
   let [fetchedData, updateFetchedData] = useState([])
   let { info, results} = fetchedData;
 
   console.log(fetchedData.results)
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
   
 useEffect(()=> {
  //IIFE
@@ -33,7 +34,7 @@ useEffect(()=> {
       <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUsZ4kIPn362NpJfOnswm9zIjr1aeAfNWoMT4qJUusnz8R3nZN4KwwlB5InGUlHhmCU9s&usqp=CAU"/>
 
       </h1>
-      
+      <Search setSearch={setSearch} className=""/>
       <div className="container">
         <div className = "row">
 
