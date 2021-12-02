@@ -2,14 +2,14 @@ import React from 'react'
 import Status from './Category/Status'
 // import Location from './Category/Location'
 
-const Filters = () => {
+const Filters = ({setStatus, setPageNumber}) => {
   return (
     <div classNameName="col-3">
       <div classNameName="text-center fw-bold fs-4 mb-2 primary"></div>
-      <div style={{cursor: "pointer"}} classNameName="text-center text-decoration-underline mb-4">Clear Filters</div>
+      <div style={{cursor: "pointer"}} classNameName="text-center text-decoration-underline mb-4"> Clear Filter </div>
     {/* Bootstrap Accordeon */}
     <div className="accordion" id="accordionExample">
-  <Status/>
+  <Status setPageNumber={setPageNumber} setStatus={setStatus}/>
   {/* <Location/> */}
   
   {/* <div className="accordion-item">

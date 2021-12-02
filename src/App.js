@@ -6,17 +6,19 @@ import Filter from "./Components/Filters/Filters"
 import Cards from "./Components/Cards"
 import Pagination from './Components/Pagination/Pagination'
 import Search from "./Components/Search/Search"
+
 function App() {
 
   let [pageNumber, setPageNumber] = useState(1);
   console.log(pageNumber)
   let [search, setSearch] = useState("")
+  let [status, setStatus] = useState("")
   let [fetchedData, updateFetchedData] = useState([])
   let { info, results} = fetchedData;
 
   console.log(fetchedData.results)
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}`
   
 useEffect(()=> {
  //IIFE
@@ -41,7 +43,7 @@ useEffect(()=> {
         <div className = "row">
 
           <div className = "col-3">
-          <Filter/>
+          <Filter setStatus={setStatus} setPageNumber={setPageNumber}/>
           </div>
 
             <div className="col-8">
