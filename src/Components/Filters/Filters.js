@@ -3,10 +3,18 @@ import Status from './Category/Status'
 // import Location from './Category/Location'
 
 const Filters = ({setStatus, setPageNumber}) => {
+
+  let clear = ()=>{
+    setStatus("");
+    setPageNumber("");
+    window.location.reload(false)
+  }
   return (
-    <div classNameName="col-3">
-      <div classNameName="text-center fw-bold fs-4 mb-2 primary"></div>
-      <div style={{cursor: "pointer"}} classNameName="text-center text-decoration-underline mb-4"> Clear Filter </div>
+    <div className="col-3">
+      <div className="text-center fw-bold fs-4 mb-2 primary"></div>
+      <div 
+      onClick={clear}
+      style={{cursor: "pointer"}} className="text-center text-decoration-underline mb-4"> Clear Filter </div>
     {/* Bootstrap Accordeon */}
     <div className="accordion" id="accordionExample">
   <Status setPageNumber={setPageNumber} setStatus={setStatus}/>

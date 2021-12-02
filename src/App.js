@@ -33,7 +33,15 @@ useEffect(()=> {
     <div className="App" 
     // style={{background:"black", "}} 
     >
-      
+       {/* <style jsx>
+        {`
+        .App{
+          background-color: #010101;
+          color: white;
+        }
+      `}
+      </style> */}
+
       <h1 className="text-center ubuntu my-4">
       <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUsZ4kIPn362NpJfOnswm9zIjr1aeAfNWoMT4qJUusnz8R3nZN4KwwlB5InGUlHhmCU9s&usqp=CAU"/>
 
@@ -43,6 +51,7 @@ useEffect(()=> {
         <div className = "row">
 
           <div className = "col-3">
+            
           <Filter setStatus={setStatus} setPageNumber={setPageNumber}/>
           </div>
 
