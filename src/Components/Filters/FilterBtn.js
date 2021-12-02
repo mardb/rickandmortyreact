@@ -26,7 +26,7 @@ export const FilterBtn = ({ name, index, items, task, setPageNumber }) => {
         type="radio" 
         name={ name }
         id={`${name}-${index}`} 
-        checked/>
+        />
 
         
         <label class="btn btn-outline-success" for={`${name}-${index}`} >
