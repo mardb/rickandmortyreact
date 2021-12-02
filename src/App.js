@@ -28,7 +28,9 @@ useEffect(()=> {
 }, [api])
 
   return (
-    <div className="App">
+    <div className="App" 
+    // style={{background:"black", "}} 
+    >
       
       <h1 className="text-center ubuntu my-4">
       <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUsZ4kIPn362NpJfOnswm9zIjr1aeAfNWoMT4qJUusnz8R3nZN4KwwlB5InGUlHhmCU9s&usqp=CAU"/>
