@@ -2,6 +2,8 @@ import React from 'react'
 import FilterBtn from '../FilterBtn'
 
 const Status = () => {
+let status = ["Alive", "Dead", "unknown"]
+
   return (
     <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne">
@@ -10,8 +12,10 @@ const Status = () => {
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div className="accordion-body">
-        <FilterBtn/>
+     
+      <div className="accordion-body d-flex flex-wrap gap-3">
+        {status.map((items, index)=> (<FilterBtn key={index} name="status" index={index} items={items} />))}
+       
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Status from './Category/Status'
-import Location from './Category/Location'
+// import Location from './Category/Location'
 
 const Filters = () => {
   return (
@@ -10,7 +10,7 @@ const Filters = () => {
     {/* Bootstrap Accordeon */}
     <div className="accordion" id="accordionExample">
   <Status/>
-  <Location/>
+  {/* <Location/> */}
   
   {/* <div className="accordion-item">
     <h2 className="accordion-header" id="headingThree">
