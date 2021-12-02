@@ -2,10 +2,12 @@ import React, { useState, useEffect} from 'react'
 
 import "bootstrap/dist/css/bootstrap.min.css" 
 import "bootstrap/dist/js/bootstrap" 
+import RickMortyLogo from'./Components/Assets/rickandmmortytransparent.png'
 import Filter from "./Components/Filters/Filters"
 import Cards from "./Components/Cards"
 import Pagination from './Components/Pagination/Pagination'
 import Search from "./Components/Search/Search"
+import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
 
@@ -42,8 +44,11 @@ useEffect(()=> {
       `}
       </style> */}
 
+      
+      <Navbar/>
+
       <h1 className="text-center ubuntu my-4">
-      <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUsZ4kIPn362NpJfOnswm9zIjr1aeAfNWoMT4qJUusnz8R3nZN4KwwlB5InGUlHhmCU9s&usqp=CAU"/>
+      <img alt="" src={RickMortyLogo}/>
 
       </h1>
       <Search setPageNumber={setPageNumber} setSearch={setSearch} className=""/>
