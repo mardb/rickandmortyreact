@@ -8,8 +8,26 @@ import Cards from "./Components/Cards"
 import Pagination from './Components/Pagination/Pagination'
 import Search from "./Components/Search/Search"
 import Navbar from "./Components/Navbar/Navbar"
+import { BrowserRouter as Router, Routes, Route } 
+from "react-router-dom"
+import Location from './Components/Pages/Locations'
 
-function App() {
+function App(){
+return(
+  <Router>
+    <div className="App">
+    <Navbar/>
+    </div>
+<Routes>
+  <Route path="/" element={<Home/>} />
+  <Route path="/characters" element={<Home/>} />
+  <Route path="/location" element={<Location/>} />
+</Routes>
+
+  </Router>
+)
+}
+const Home = () => {
 
   let [pageNumber, setPageNumber] = useState(1);
   console.log(pageNumber)
@@ -45,7 +63,7 @@ useEffect(()=> {
       </style> */}
 
       
-      <Navbar/>
+      {/* <Navbar/> */}
 
       <h1 className="text-center ubuntu my-4">
       <img alt="" src={RickMortyLogo}/>
