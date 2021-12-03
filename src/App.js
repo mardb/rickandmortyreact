@@ -56,7 +56,7 @@ useEffect(()=> {
        {/* <style jsx>
         {`
         .App{
-          background-color: #010101;
+          background-color: ##181818;
           color: white;
         }
       `}
