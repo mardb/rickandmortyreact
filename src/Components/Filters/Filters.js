@@ -10,11 +10,11 @@ const Filters = ({setStatus, setPageNumber}) => {
     window.location.reload(false)
   }
   return (
-    <div className="col-3 col-12 mb-5">
-      <div className="text-center fw-bold fs-4 mb-2 primary"></div>
+    <div className="col-lg-3 col-12 mb-5">
+      <div className="text-center fw-bold fs-4 mb-2 primary">Filter</div>
       <div 
       onClick={clear}
-      style={{cursor: "pointer"}} className="text-center text-decoration-underline mb-4"> Clear Filter </div>
+      style={{cursor: "pointer"}} className="text-center text-decoration-underline mb-3"> Clear Filter </div>
     {/* Bootstrap Accordeon */}
     <div className="accordion" id="accordionExample">
   <Status setPageNumber={setPageNumber} setStatus={setStatus}/>

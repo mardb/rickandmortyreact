@@ -63,7 +63,7 @@ const CardDetails = () => {
           </div>
         </div>
       </div>
-      Single Card goes here - {id}
+      {/* Single Card goes here - {id} */}
     </div>
   )
 }

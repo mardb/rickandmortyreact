@@ -73,17 +73,17 @@ useEffect(()=> {
 
       </h1>
       {/* <h1 className="text-center mb-4"> Characters</h1> */}
-      <h1 className="text-center"></h1>
+      <h1 className="text-center mb-3">Characters</h1>
       <Search setPageNumber={setPageNumber} setSearch={setSearch} className=""/>
       <div className="container">
         <div className = "row">
 
-          <div className = "col-3">
+          {/* <div className = "col-3"> */}
             
           <Filter setStatus={setStatus} setPageNumber={setPageNumber}/>
-          </div>
+          {/* </div> */}
 
-            <div className="col-8">
+            <div className="col-lg-8 col-12">
               <div className="row">
                 <Cards page="/" results={results}/>
             </div>
