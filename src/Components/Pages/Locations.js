@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Cards from '../Cards';
+import Cards from '../Cards/Cards'
 import InputGroup from '../Filters/Category/InputGroup'; 
 
 const Location = () => {
@@ -48,7 +48,7 @@ console.log(data)
     </div>
     <div className="col-lg-8 col-12">
       <div className="row">
-      <Cards page="/location" results={results}/>
+      <Cards page="/locations" results={results}/>
       </div>
      
     </div>

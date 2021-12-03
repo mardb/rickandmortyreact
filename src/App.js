@@ -4,13 +4,14 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap" 
 import RickMortyLogo from'./Components/Assets/rickandmmortytransparent.png'
 import Filter from "./Components/Filters/Filters"
-import Cards from "./Components/Cards"
+import Cards from "./Components/Cards/Cards"
 import Pagination from './Components/Pagination/Pagination'
 import Search from "./Components/Search/Search"
 import Navbar from "./Components/Navbar/Navbar"
 import { BrowserRouter as Router, Routes, Route } 
 from "react-router-dom"
 import Location from './Components/Pages/Locations'
+import CardDetails from './Components/Cards/CardDetails'
 
 function App(){
 return(
@@ -20,8 +21,10 @@ return(
     </div>
 <Routes>
   <Route path="/" element={<Home/>} />
-  <Route path="/characters" element={<Home/>} />
+  <Route path="/:id" element={<CardDetails/>} />
+
   <Route path="/location" element={<Location/>} />
+  <Route path="/location/:id" element={<CardDetails/>} />
 </Routes>
 
   </Router>
@@ -64,11 +67,13 @@ useEffect(()=> {
 
       
       {/* <Navbar/> */}
-
+      
       <h1 className="text-center ubuntu my-4">
       <img alt="" src={RickMortyLogo}/>
 
       </h1>
+      {/* <h1 className="text-center mb-4"> Characters</h1> */}
+      <h1 className="text-center"></h1>
       <Search setPageNumber={setPageNumber} setSearch={setSearch} className=""/>
       <div className="container">
         <div className = "row">
@@ -80,7 +85,7 @@ useEffect(()=> {
 
             <div className="col-8">
               <div className="row">
-                <Cards results={results}/>
+                <Cards page="/" results={results}/>
             </div>
           </div>
         </div>

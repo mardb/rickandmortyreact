@@ -1,16 +1,21 @@
 import React from 'react'
 import styles from './Cards.module.scss'
+import {Link} from 'react-router-dom'
 
 
-
-const Cards = ({results}) => {
+const Cards = ({results, page}) => {
 
   let display;
 console.log(results)
   if( results ){
     display = results.map( x => {
       let {id, name, image, location, status} = x
-      return( <div key={id} className="col-4 mb-4 position-relative">
+      return ( 
+        
+      <Link 
+      to={`${page}${id}`}
+      style={{textDecoration: "none"}}
+      key={id} className="col-4 mb-4 position-relative text-dark">
         <div className={`${styles.cards}`}>
           <img className={`${styles.img}`} src={image} alt="" className="img-fluid"/>
           <div style={{padding: "10px"}} className="content">
@@ -41,7 +46,7 @@ console.log(results)
         })()}
 
         {/* <span className={`${styles.badge} position-absolute badge bg-success`}>{status}</span> */}
-      </div> )
+      </Link> )
     })
   } else{
     display = "We didnt find anyone with that Name. Please try a different search.  "
