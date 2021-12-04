@@ -29,7 +29,7 @@ export const FilterBtn = ({ name, index, items, task, setPageNumber }) => {
         />
 
         
-        <label class="btn btn-outline-success" for={`${name}-${index}`} >
+        <label className="btn btn-outline-success" for={`${name}-${index}`} >
           {items}
           </label>
 
