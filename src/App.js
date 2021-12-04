@@ -25,6 +25,7 @@ return(
 
   <Route path="/location" element={<Location/>} />
   <Route path="/location/:id" element={<CardDetails/>} />
+  
 </Routes>
 
   </Router>

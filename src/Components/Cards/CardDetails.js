@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CardNotes from './CardNotes';
 
 const CardDetails = () => {
   let { id } = useParams();
@@ -12,7 +13,7 @@ const CardDetails = () => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       updateFetchedData(data);
-      console.log(data.results);
+      // console.log(data.results);
     })();
   }, [api]);
 
@@ -51,45 +52,12 @@ const CardDetails = () => {
             <span className="fw-bold">Origin: </span>
             {origin?.name}
           </div>
-          {/*  */}
-          <div className="container">
-            <button
-              className="border-0"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i className="fas fa-edit open"></i>
-              <i className="fas fa-times close fw-bold text-dark"></i>
-            </button>
-            <div
-              className="collapse  justify-content-end"
-              id="navbarNavAltMarkup"
-            >
-              {/* ---------- */}
-              <form>
-                <div className="mb-3">
-                  <label for="exampleInputEmail1" className="form-label">
-                    Add Notes:
-                  </label>
-                  <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-  <label for="floatingTextarea"></label>
-</div>
-                  <div id="emailHelp" className="form-text">
-                    Wubba Lubba Dub Dub!
-                  </div>
-                </div>
-
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </form>
-            </div>
+          <div className="">
+            <span className="fw-bold">Notes: </span>
+            <CardNotes />
           </div>
+          {/*  */}
+          {/*  */}
         </div>
       </div>
       {/* Single Card goes here - {id} */}
